@@ -1,5 +1,5 @@
-describe("Servers test (with setup and tear-down)", function() {
-    beforeEach(function () {
+describe("Servers test (with setup and tear-down)", function() { //describe helps orginze the test code
+    beforeEach(function () { 
       serverNameInput.value = 'Alice';
     });
   
@@ -29,7 +29,7 @@ describe("Servers test (with setup and tear-down)", function() {
       expect(curTdList[2].innerText).toEqual('X');
     });
   
-    afterEach(function() {
+    afterEach(function() {         //After each test is ran we need to clear the test so we don't back up a server or whereever the test information is going
       serverId = 0;
       serverTbody.innerHTML = '';
       allServers = {};
